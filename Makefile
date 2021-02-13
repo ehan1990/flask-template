@@ -1,5 +1,11 @@
 PORT=5050
 
+dev-setup:
+	pip3.8 install -r requirements-dev.txt
+
+test:
+	pytest -v
+
 run:
 	python3 app.py
 
