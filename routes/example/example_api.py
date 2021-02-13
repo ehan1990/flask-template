@@ -13,7 +13,7 @@ def list_datastore_api():
 
 @example_api_resource.route("/example", methods=['POST'])
 def add_datastore_api():
-    data = request.get_json()
+    data = request.get_json(force=True)
     DataStore.insert(data["val"])
     resp = jsonify(success=True)
     return resp
