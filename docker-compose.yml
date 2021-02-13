@@ -1,0 +1,11 @@
+version: '3'
+services:
+  flask-template:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: flask-template
+    container_name: flask-template-container
+    restart: unless-stopped
+    ports:
+      - '5050:5050'
