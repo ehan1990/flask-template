@@ -4,7 +4,7 @@ dev-setup:
 	pip3.8 install -r requirements-dev.txt
 
 test:
-	pytest -v
+	pytest -v --junitxml testreport.xml
 
 run:
 	python3 app.py
