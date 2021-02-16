@@ -9,3 +9,10 @@ phases:
   build:
     commands:
       - make test
+
+reports:
+  pytest_reports:
+    files:
+      - testreport.xml
+    base-directory: .
+    file-format: JUNITXML
