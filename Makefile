@@ -19,6 +19,9 @@ post:
 list:
 	@curl localhost:${PORT}/example
 
+cicd-build:
+	docker build -t flask-template:latest .
+
 build:
 	docker-compose build
 

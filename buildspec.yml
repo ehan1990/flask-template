@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - make test
-      - make build
+      - make cicd-build
 
 reports:
   pytest_reports:
