@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  parameter-store:
+    FOO: "/api/env"
+
 phases:
   install:
     runtime-versions:
@@ -8,12 +12,4 @@ phases:
       pip3 install -r requirements-dev.txt
   build:
     commands:
-      - make test
-      - make cicd-build
-
-reports:
-  pytest_reports:
-    files:
-      - testreport.xml
-    base-directory: .
-    file-format: JUNITXML
+      - echo ${FOO}      
